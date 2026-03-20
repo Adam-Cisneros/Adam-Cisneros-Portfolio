@@ -33,7 +33,7 @@ function NavBar() {
           <li><Link to="/aiml" className='hover:underline'>AI / ML</Link></li>
           <li><Link to="/data" className='hover:underline'>Data</Link></li>
           <li><Link to="/webdev" className='hover:underline'>Web Dev</Link></li>
-          <li><Link to="/mobileappdev" className='hover:underline'>Mobile App Dev</Link></li>
+          <li><Link to="/mobile" className='hover:underline'>Mobile App Dev</Link></li>
           <li><Link to="/gamedev" className='hover:underline'>Game Dev</Link></li>
           <li><Link to="/contact" className='hover:underline'>Contact</Link></li>
         </ul>

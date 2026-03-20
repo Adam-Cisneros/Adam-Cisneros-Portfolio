@@ -2,6 +2,8 @@ import cpLogo from './assets/cp_logo.png'
 import lpcLogo from './assets/lpc_logo.png'
 import amoebaLogo from './assets/amoebaLogoTransparent.jpg'
 import cpgdLogo from './assets/cpgd_logo.png'
+import lnLogo from './assets/ln_logo.png'
+import ghLogo from './assets/gh_logo.png'
 
 function About() {
   return (
@@ -96,6 +98,7 @@ function About() {
               <li>Conducted code reviews and provided constructive feedback to peers, fostering a culture of continuous improvement.</li>
               <li>Developed responsive, user-centric UIs and implemented CI/CD pipelines for production-grade deployment.</li>
             </ul>
+            <a className="hover:underline" href="https://amoebalaboratory.com" target="_blank" rel="noopener noreferrer">Visit Amoeba Laboratory</a>
           </div>
         </div>
       </div>
@@ -117,6 +120,7 @@ function About() {
               <li>Developed and maintained the club's website and online presence.</li>
               <li>Mentored peers in Git, version control, and design patterns related to game development.</li>
             </ul>
+            <a className="hover:underline" href="https://cpgd.org" target="_blank" rel="noopener noreferrer">Visit Cal Poly Game Development Club</a>
           </div>
         </div>
       </div>
@@ -147,6 +151,17 @@ function About() {
             <h3 className="font-bold mb-2">Reading</h3>
             <p>Exploring various genres and authors, with a focus on science fiction and fantasy.</p>
           </div>
+        </div>
+      </div>
+      <div className="container mx-auto mt-12 items-center">
+        <h2 className="text-4xl font-bold mb-4">Socials</h2>
+        <div className="flex flex-row gap-6 px-4 items-center justify-center">
+          <a className="hover:scale-110 transition-transform cursor-pointer" href="https://www.linkedin.com/in/adam-cisneros-ab5b24220/" target="_blank" rel="noopener noreferrer">
+            <img src={lnLogo} alt="LinkedIn Logo" className="h-16 inline-block mr-2" />
+          </a>
+          <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros" target="_blank" rel="noopener noreferrer">
+            <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+          </a>
         </div>
       </div>
     </section>

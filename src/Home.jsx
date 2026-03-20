@@ -28,7 +28,7 @@ function Home() {
         </Link>
 
         {/* Apps — tall right column */}
-        <Link to="/mobileappdev" className="row-span-3 relative overflow-hidden rounded-lg group cursor-pointer">
+        <Link to="/mobile" className="row-span-3 relative overflow-hidden rounded-lg group cursor-pointer">
           <img src={appImg} alt="Mobile Apps" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
             <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">Mobile Apps</span>
