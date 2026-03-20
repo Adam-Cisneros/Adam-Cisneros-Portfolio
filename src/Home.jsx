@@ -9,7 +9,7 @@ import gameImg from './assets/vg.png'
 function Home() {
   return (
     <header className="h-screen bg-black">
-      <div className="grid grid-cols-4 grid-rows-3 gap-1.5 h-full p-3">
+      <div className="grid grid-cols-4 grid-rows-3 gap-1.5 h-full p-8">
 
         {/* About Me — tall left column */}
         <Link to="/about" className="row-span-2 relative overflow-hidden rounded-lg group cursor-pointer">
