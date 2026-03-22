@@ -12,7 +12,7 @@ import Game from './Game.jsx'
 import Contact from './Contact.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename='/Adam-Cisneros-Portfolio'>
     <NavBar />
     <Routes>
       <Route path="/" element={<Home />} />
