@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
 import Home from './Home.jsx'
 import NavBar from './NavBar.jsx'
@@ -12,7 +12,7 @@ import Game from './Game.jsx'
 import Contact from './Contact.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/Adam-Cisneros-Portfolio'>
+  <HashRouter basename='/adam-cisneros-portfolio'>
     <NavBar />
     <Routes>
       <Route path="/" element={<Home />} />
@@ -24,5 +24,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/gamedev" element={<Game />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
 )
