@@ -11,10 +11,10 @@ function Contact() {
         e.preventDefault();
 
         emailjs.sendForm(
-            import.meta.env.SERVICE_ID,
-            import.meta.env.TEMPLATE_ID,
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             form.current,
-            import.meta.env.PUBLIC_KEY
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
             alert('Message sent successfully!');
@@ -39,8 +39,9 @@ function Contact() {
                     <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block" />
                 </a>
             </div>
-            <p className="text-lg pb-8"> Or feel free to reach out if you have any questions or inquiries!</p>
+            <p className="text-lg pb-8"> . . . Or feel free to reach out if you have any questions or inquiries!</p>
             <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center py-16 rounded-lg bg-accent text-textsec w-full md:w-3/4 mx-auto">
+                <h1 className="text-4xl font-bold pb-8">Fill Out The Form Below to Send Me A Message!</h1>
                 <input type="text" name="name" placeholder="Your Name" className="mb-4 p-2 rounded-lg w-4/5 md:w-3/4 bg-background text-textsec" />
                 <input type="email" name="email" placeholder="Your Email" className="mb-4 p-2 rounded-lg w-4/5 md:w-3/4 bg-background text-textsec" />
                 <textarea name="message" placeholder="Your Message" className="mb-4 p-2 rounded-lg w-4/5 md:w-3/4 bg-background text-textsec" rows="4"></textarea>

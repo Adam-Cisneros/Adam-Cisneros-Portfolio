@@ -3,8 +3,8 @@ import { useRef } from 'react'
 import acisne from './assets/acisne32.jpg'
 import dataImg from './assets/data.png'
 import appImg from './assets/app.png'
-import aiImg from './assets/ai.jpeg'
-import webImg from './assets/webdev.jpg'
+import aiImg from './assets/ai.png'
+import webImg from './assets/webdev.png'
 import gameImg from './assets/vg.png'
 
 function Home() {
@@ -28,10 +28,10 @@ function Home() {
   const tiles = [
     { to: "/about",   img: acisne,  label: "About Me",    cls: "row-span-2", dur: 3.8, delay: 0    },
     { to: "/aiml",    img: aiImg,   label: "AI / ML",     cls: "col-span-2", dur: 4.2, delay: 0.5  },
-    { to: "/mobile",  img: appImg,  label: "Mobile Apps", cls: "row-span-3", dur: 3.5, delay: 1.1  },
+    { to: "/mobile",  img: appImg,  label: "Mobile Dev", cls: "row-span-3", dur: 3.5, delay: 1.1  },
     { to: "/data",    img: dataImg, label: "Data",        cls: "",           dur: 4.6, delay: 0.3  },
     { to: "/webdev",  img: webImg,  label: "Web Dev",     cls: "row-span-2", dur: 3.2, delay: 0.8  },
-    { to: "/gamedev", img: gameImg, label: "Video Games", cls: "col-span-2", dur: 4.0, delay: 0.15 },
+    { to: "/gamedev", img: gameImg, label: "Game Dev", cls: "col-span-2", dur: 4.0, delay: 0.15 },
   ]
 
   return (

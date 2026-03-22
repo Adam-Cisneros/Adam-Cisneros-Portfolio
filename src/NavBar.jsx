@@ -27,6 +27,15 @@ function NavBar() {
       <nav className='flex flex-col md:flex-row md:items-center md:justify-between'>
         <h1 className='text-xl font-bold'>
           <Link to="/">Adam Cisneros</Link>
+          <a
+            href="/Adam--Cisneros.pdf"
+            download="Adam_Cisneros_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='ml-8 text-sm font-normal bg-textprime text-textsec p-3 rounded-full hover:bg-background hover:text-textprime transition-transform duration-200'
+          >
+            ↓ Resume
+          </a>
         </h1>
         <ul className='flex space-x-5'>
           <li><Link to="/about" className='hover:underline'>About</Link></li>
