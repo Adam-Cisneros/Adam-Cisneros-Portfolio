@@ -12,7 +12,7 @@ import Game from './Game.jsx'
 import Contact from './Contact.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <HashRouter basename='/adam-cisneros-portfolio'>
+  <HashRouter>
     <NavBar />
     <Routes>
       <Route path="/" element={<Home />} />
