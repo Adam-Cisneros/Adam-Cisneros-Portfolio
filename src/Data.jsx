@@ -1,14 +1,14 @@
-import ghLogo from './assets/gh_logo.png';
+import ghLogo from './assets/gh_logo.png'
 
 function Data() {
     return (
-        <section className="py-20 bg-black text-white text-center items-center">
+        <section className="py-20 bg-background text-textprime text-center items-center font-primary">
             <h1 className="text-4xl font-bold mb-4">Data/Database Projects</h1>
             <p className="text-lg pb-8">This page is dedicated to showcasing my Data/Database projects.</p>
             <div className="flex flex-col items-center justify-center gap-16">
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">Virtual Ecosystem</h2>
-                    <p className="text-lg pb-8">
+                    <p className="text-lg py-8">
                         This group project will simulate an ecosystem in which a neighboring village will 
                         interact with. Much like a city-management game, the project will want the user to make 
                         decisions on how to manipulate the ecosystem and environment around it. Some examples are 
@@ -24,13 +24,13 @@ function Data() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform" href="https://github.com/hlathery/Virtual-Ecosystem" target="_blank" rel="noopener noreferrer">
-                        <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+                        <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
                     </a>
                 </div>
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">Valley Brews (Simulated Commerce Market)</h2>
-                    <p className="text-lg">
-                        This is a project built over the course of 10 weeks in which we will be building out a backend API for a simulated 
+                    <p className="text-lg py-8">
+                        This is a project built over the course of 10 weeks during my databases class in which we built out a backend API for a simulated 
                         commerce market. The project is called Valley Brews and the setting is a fantasy RPG world where adventurers seek to 
                         buy potions. It utilizes Central Coast Cauldrons which is a stubbed out API meant to serve as a starting point for learning how to build 
                         backend services that integrate with a persistence layer. I progressively built out my own forked 
@@ -40,7 +40,7 @@ function Data() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros/ValleyBrewss" target="_blank" rel="noopener noreferrer">
-                        <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+                        <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
                     </a>
                 </div>
             </div>

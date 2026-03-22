@@ -1,4 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useRef } from 'react'
 import acisne from './assets/acisne32.jpg'
 import dataImg from './assets/data.png'
 import appImg from './assets/app.png'
@@ -7,58 +8,57 @@ import webImg from './assets/webdev.jpg'
 import gameImg from './assets/vg.png'
 
 function Home() {
+  const gridRef = useRef(null)
+
+  const handleMouseMove = (e) => {
+    const grid = gridRef.current
+    if (!grid) return
+    const tiles = grid.querySelectorAll('.tile-wave')
+    tiles.forEach((tile) => {
+      const rect = tile.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      tile.style.setProperty('--mouse-x', `${x}px`)
+      tile.style.setProperty('--mouse-y', `${y}px`)
+    })
+    grid.style.setProperty('--cursor-x', `${e.clientX}px`)
+    grid.style.setProperty('--cursor-y', `${e.clientY}px`)
+  }
+
+  const tiles = [
+    { to: "/about",   img: acisne,  label: "About Me",    cls: "row-span-2", dur: 3.8, delay: 0    },
+    { to: "/aiml",    img: aiImg,   label: "AI / ML",     cls: "col-span-2", dur: 4.2, delay: 0.5  },
+    { to: "/mobile",  img: appImg,  label: "Mobile Apps", cls: "row-span-3", dur: 3.5, delay: 1.1  },
+    { to: "/data",    img: dataImg, label: "Data",        cls: "",           dur: 4.6, delay: 0.3  },
+    { to: "/webdev",  img: webImg,  label: "Web Dev",     cls: "row-span-2", dur: 3.2, delay: 0.8  },
+    { to: "/gamedev", img: gameImg, label: "Video Games", cls: "col-span-2", dur: 4.0, delay: 0.15 },
+  ]
+
   return (
-    <header className="h-screen bg-black">
-      <div className="grid grid-cols-4 grid-rows-3 gap-1.5 h-full p-8">
-
-        {/* About Me — tall left column */}
-        <Link to="/about" className="row-span-2 relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={acisne} alt="About Me" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">About Me</span>
-          </div>
-        </Link>
-
-        {/* AI/ML */}
-        <Link to="/aiml" className="col-span-2 relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={aiImg} alt="AI / ML" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">AI / ML</span>
-          </div>
-        </Link>
-
-        {/* Apps — tall right column */}
-        <Link to="/mobile" className="row-span-3 relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={appImg} alt="Mobile Apps" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">Mobile Apps</span>
-          </div>
-        </Link>
-
-        {/* Data */}
-        <Link to="/data" className="relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={dataImg} alt="Data" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">Data</span>
-          </div>
-        </Link>
-
-        {/* Web Dev */}
-        <Link to="/webdev" className="row-span-2 relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={webImg} alt="Web Dev" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">Web Dev</span>
-          </div>
-        </Link>
-
-        {/* Video Games — wide bottom-left */}
-        <Link to="/gamedev" className="col-span-2 relative overflow-hidden rounded-lg group cursor-pointer">
-          <img src={gameImg} alt="Video Games" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-[40ms]">Video Games</span>
-          </div>
-        </Link>
-
+    <header className="h-screen bg-textsec font-bubbly">
+      <div
+        ref={gridRef}
+        onMouseMove={handleMouseMove}
+        className="grid grid-cols-4 grid-rows-3 gap-1.5 h-full p-8"
+      >
+        {tiles.map(({ to, img, label, cls, dur, delay }) => (
+          <Link
+            key={to}
+            to={to}
+            className={`tile-wave ${cls} relative rounded-lg cursor-pointer`}
+            style={{
+              animationDuration: `${dur}s`,
+              animationDelay: `${delay}s`,
+            }}
+          >
+            <div className="absolute inset-0 overflow-hidden rounded-lg">
+              <img src={img} alt={label} className="w-full h-full object-cover transition-transform duration-500" />
+              <div className="overlay absolute inset-0 flex items-center justify-center">
+                <span className="text-background text-2xl font-bubbly">{label}</span>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </header>
   )

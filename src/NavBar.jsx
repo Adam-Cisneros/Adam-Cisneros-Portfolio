@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   const [visible, setVisible] = useState(true)
@@ -23,7 +23,7 @@ function NavBar() {
   }, [lastScrollY])
 
   return (
-    <header className={`bg-black/90 text-white p-4 top-0 sticky z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
+    <header className={`bg-textsec text-background font-primary p-4 top-0 sticky z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <nav className='flex flex-col md:flex-row md:items-center md:justify-between'>
         <h1 className='text-xl font-bold'>
           <Link to="/">Adam Cisneros</Link>

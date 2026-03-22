@@ -2,11 +2,11 @@ import ghLogo from './assets/gh_logo.png'
 
 function AIML() {
   return (
-    <section className="py-20 bg-black text-white text-center items-center">
+    <section className="py-20 bg-background text-textprime text-center items-center font-primary">
       <h1 className="text-4xl font-bold mb-4">AI / ML</h1>
       <p className="text-lg pb-8">This page is dedicated to showcasing my AI and ML projects.</p>
       <div className="flex flex-col items-center justify-center gap-16">
-        <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+        <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
           <h2 className="text-2xl font-bold mb-2">Game Success Classifier</h2>
           <p className="text-lg py-8">
             This project aims to address challenges faced by multiple groups within the video 
@@ -21,24 +21,24 @@ function AIML() {
           </p>
           <h3 className="text-xl font-bold mb-2">View Here</h3>
           <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros/GameSuccessClassifier" target="_blank" rel="noopener noreferrer">
-            <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+            <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
           </a>
         </div>
-        <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+        <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
           <h2 className="text-2xl font-bold mb-2">Fantasy Content Recommender</h2>
-          <p className="text-lg">
+          <p className="text-lg py-8">
             This is an iterative class project that focuses on recommending fantasy content to users based on their preferences 
             and behavior. By leveraging machine learning algorithms, it aims to provide personalized 
             suggestions that enhance user engagement and satisfaction.
           </p>
           <h3 className="text-xl font-bold mb-2">View Here</h3>
           <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros/CSC-466" target="_blank" rel="noopener noreferrer">
-            <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+            <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
           </a>
         </div>
-        <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+        <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
           <h2 className="text-2xl font-bold mb-2">ML Dueling Game</h2>
-          <p className="text-lg">
+          <p className="text-lg py-8">
             This project explores the use of machine learning techniques in developing a dueling game
             environment. It aims to create intelligent agents that can learn and adapt their strategies
             through reinforcement learning. The machine learning (ML) bot is trained using a deep Q network 
@@ -47,7 +47,7 @@ function AIML() {
           </p>
           <h3 className="text-xl font-bold mb-2">View Here</h3>
           <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros/ML-Duel-Game" target="_blank" rel="noopener noreferrer">
-            <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+            <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
           </a>
         </div>
       </div>

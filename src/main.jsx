@@ -1,6 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
 import Home from './Home.jsx'
 import NavBar from './NavBar.jsx'
@@ -10,6 +9,7 @@ import Data from './Data.jsx'
 import WebDev from './WebDev.jsx'
 import Mobile from './Mobile.jsx'
 import Game from './Game.jsx'
+import Contact from './Contact.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -22,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/webdev" element={<WebDev />} />
       <Route path="/mobile" element={<Mobile />} />
       <Route path="/gamedev" element={<Game />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>,
 )

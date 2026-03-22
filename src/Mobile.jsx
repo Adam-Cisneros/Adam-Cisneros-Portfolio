@@ -1,14 +1,14 @@
-import ghLogo from './assets/gh_logo.png';
+import ghLogo from './assets/gh_logo.png'
 
 function Mobile() {
     return (
-        <section className="py-20 bg-black text-white text-center items-center">
+        <section className="py-20 bg-background text-textprime text-center items-center font-primary">
             <h1 className="text-4xl font-bold mb-4">Mobile Development Projects</h1>
             <p className="text-lg pb-8">This page is dedicated to showcasing my Mobile Development projects.</p>
             <div className="flex flex-col items-center justify-center gap-16">
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">GamePlan</h2>
-                    <p className="text-lg pb-8">
+                    <p className="text-lg py-8">
                         This is a mobile app made in Android Studio with Kotlin. This is a companion app 
                         to help developers with large-scale projects and teams keep track of their projects. 
                         To become a user, you can sign-in using Firebase Authentication using Email + Password, 
@@ -23,7 +23,7 @@ function Mobile() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros/GamePlan" target="_blank" rel="noopener noreferrer">
-                        <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+                        <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
                     </a>
                 </div>
             </div>

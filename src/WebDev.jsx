@@ -4,13 +4,13 @@ import cpgdLogo from './assets/cpgd_logo.png'
 
 function WebDev() {
     return (
-        <section className="py-20 bg-black text-white text-center items-center">
+        <section className="py-20 bg-background text-textprime text-center items-center font-primary">
             <h1 className="text-4xl font-bold mb-4">Web Development Projects</h1>
             <p className="text-lg pb-8">This page is dedicated to showcasing my Web Development projects.</p>
             <div className="flex flex-col items-center justify-center gap-16">
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">Amoeba Laboratory</h2>
-                    <p className="text-lg pb-8">
+                    <p className="text-lg py-8">
                         A website built to facilitate Amoeba Laboratories LLC during my internship there. 
                         The website is built using React and Tailwind CSS and is deployed on Firebase. 
                         It serves as a platform to showcase the company's services, projects, and contact 
@@ -18,12 +18,12 @@ function WebDev() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform cursor-pointer" href="https://amoebalaboratory.com" target="_blank" rel="noopener noreferrer">
-                        <img src={amoebaLogo} alt="Amoeba Laboratory Logo" className="h-24 inline-block mr-2" />
+                        <img src={amoebaLogo} alt="Amoeba Laboratory Logo" className="h-24 inline-block mr-2 bg-textsec rounded-full hover:scale-110 transition-transform" />
                     </a>
                 </div>
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">Cal Poly Game Development</h2>
-                    <p className="text-lg pb-8">
+                    <p className="text-lg py-8">
                         A website built to facilitate the Cal Poly Game Development Club during my time as Vice President.
                         The website is built using React and Tailwind CSS and is deployed on GitHub Pages.
                         It serves as a platform to showcase the club's events, projects, and member information, 
@@ -31,15 +31,15 @@ function WebDev() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform" href="https://github.com/gbug007/cpgd-website" target="_blank" rel="noopener noreferrer">
-                        <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+                        <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
                     </a>
                     <a className="hover:scale-110 transition-transform" href="https://cpgd.org/" target="_blank" rel="noopener noreferrer">
-                        <img src={cpgdLogo} alt="Cal Poly Game Development Logo" className="h-24 inline-block mr-2" />
+                        <img src={cpgdLogo} alt="Cal Poly Game Development Logo" className="h-24 inline-block mr-2 bg-background rounded-full hover:scale-110 transition-transform" />
                     </a>
                 </div>
-                <div className="md:w-1/2 bg-gray-800 p-4 rounded-lg">
+                <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg">
                     <h2 className="text-2xl font-bold mb-2">myCloset</h2>
-                    <p className="text-lg pb-8">
+                    <p className="text-lg py-8">
                         This is a class project application me and few other developers built whilst learning
                         web development fundamentals called myCloset. The project is built using React and 
                         Tailwind CSS and was deployed using Azure (no longer deployed/active, must run locally).
@@ -55,7 +55,7 @@ function WebDev() {
                     </p>
                     <h3 className="text-xl font-bold mb-2">View Here</h3>
                     <a className="hover:scale-110 transition-transform" href="https://github.com/michaelalbertslo/BranchBeasts" target="_blank" rel="noopener noreferrer">
-                        <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+                        <img src={ghLogo} alt="GitHub Logo" className="h-20 inline-block mr-2 hover:scale-110 transition-transform" />
                     </a>
                 </div>
             </div>

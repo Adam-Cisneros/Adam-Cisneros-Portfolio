@@ -4,10 +4,11 @@ import amoebaLogo from './assets/amoebaLogoTransparent.jpg'
 import cpgdLogo from './assets/cpgd_logo.png'
 import lnLogo from './assets/ln_logo.png'
 import ghLogo from './assets/gh_logo.png'
+import itchLogo from './assets/itchio_logo.png'
 
 function About() {
   return (
-    <section className="py-20 bg-black text-white text-center items-center">
+    <section className="py-20 bg-background text-textprime text-center items-center font-primary">
       <div className="container mx-auto">
         <div className="bg-[url('./assets/acisne32.jpg')] bg-cover bg-center h-64 w-64 rounded-full mx-auto mb-8" />
         <h1 className="text-4xl font-bold mb-8">About Me</h1>
@@ -25,18 +26,18 @@ function About() {
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-bold mb-4">My Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Programming Languages</h3>
             <p>Python, C, C++, C#, HTML, CSS, JavaScript, Kotlin</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Systems & Tools</h3>
             <p>
               REST APIs, DBMS, Cloud Platforms (Azure, Vercel), Database Systems (SQL & NoSQL), CI/CD,
               Git, GitHub, React, MongoDB, Firebase/Firestore, Supabase, scikit-learn, StableBaselines3
             </p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Concepts & Experience</h3>
             <p>
               Full-Stack Development (Backend & Frontend Design), Scalable Systems, Distributed Systems, Cloud
@@ -83,13 +84,13 @@ function About() {
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-bold mb-4">Experience</h2>
         <div className="flex flex-col gap-6 px-4">
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <div className="flex justify-center mb-4">
-              <img src={amoebaLogo} alt="Amoeba Laboratory Logo" className="h-40" />
+              <img src={amoebaLogo} alt="Amoeba Laboratory Logo" className="h-40 bg-textsec rounded-full" />
             </div>
             <h4 className="font-bold mb-2">Software Engineer Intern</h4>
             <p>Amoeba Laboratory - Tracy, CA</p>
-            <p className="text-sm text-gray-400">June 2025 - August 2025</p>
+            <p className="text-sm">June 2025 - August 2025</p>
             <ul className="list-disc list-inside">
               <li>Designed and shipped a full-stack, cloud-based platform end-to-end for real-time food safety operations.</li>
               <li>Implemented user authentication and authorization using Firebase Auth.</li>
@@ -105,13 +106,13 @@ function About() {
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-bold mb-4">Leadership Experience</h2>
         <div className="flex flex-col gap-6 px-4">
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <div className="flex justify-center mb-4">
-              <img src={cpgdLogo} alt="Cal Poly Game Development Club Logo" className="h-40" />
+              <img src={cpgdLogo} alt="Cal Poly Game Development Club Logo" className="h-40 bg-background rounded-full p-2" />
             </div>
             <h4 className="font-bold mb-2">Vice President</h4>
             <p>Cal Poly Game Development Club</p>
-            <p className="text-sm text-gray-400">March 2025 - June 2026</p>
+            <p className="text-sm">March 2025 - June 2026</p>
             <ul className="list-disc list-inside">
               <li>Organized and led weekly game development workshops for club members.</li>
               <li>Coordinated team projects and facilitated communication between members.</li>
@@ -127,27 +128,27 @@ function About() {
       <div className="container mx-auto mt-12">
         <h2 className="text-4xl font-bold mb-4">My Hobbies</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Guitar</h3>
             <p>Playing guitar and composing music.</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Fencing</h3>
             <p>Practicing fencing techniques and participating in competitions.</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Running</h3>
             <p>Participating in marathons and enjoying outdoor runs.</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Soccer</h3>
             <p>Participating in soccer matches and enjoying team play.</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Video Games</h3>
             <p>Playing video games and engaging in online multiplayer experiences.</p>
           </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
+          <div className="bg-accent p-4 rounded-lg text-textsec">
             <h3 className="font-bold mb-2">Reading</h3>
             <p>Exploring various genres and authors, with a focus on science fiction and fantasy.</p>
           </div>
@@ -156,11 +157,14 @@ function About() {
       <div className="container mx-auto mt-12 items-center">
         <h2 className="text-4xl font-bold mb-4">Socials</h2>
         <div className="flex flex-row gap-6 px-4 items-center justify-center">
+          <a className="hover:scale-110 transition-transform" href="https://atomictwig.itch.io/" target="_blank" rel="noopener noreferrer">
+              <img src={itchLogo} alt="Itch.io Logo" className="h-18 inline-block" />
+          </a>
           <a className="hover:scale-110 transition-transform cursor-pointer" href="https://www.linkedin.com/in/adam-cisneros-ab5b24220/" target="_blank" rel="noopener noreferrer">
             <img src={lnLogo} alt="LinkedIn Logo" className="h-16 inline-block mr-2" />
           </a>
           <a className="hover:scale-110 transition-transform" href="https://github.com/Adam-Cisneros" target="_blank" rel="noopener noreferrer">
-            <img src={ghLogo} alt="GitHub Logo" className="h-24 inline-block mr-2" />
+            <img src={ghLogo} alt="GitHub Logo" className="h-18 inline-block mr-2" />
           </a>
         </div>
       </div>

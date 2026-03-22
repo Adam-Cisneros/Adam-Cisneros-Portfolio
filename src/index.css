@@ -1,1 +1,163 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'BubblyFont';
+  src: url('./assets/bubbly.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@theme {
+  --color-textsec: #272525;
+  --color-textprime: #a35b38;
+  --color-accent: #ada286;
+  --color-background: #e7e2d4;
+  --font-primary: 'Poppins', sans-serif;
+  --font-bubbly: 'BubblyFont';
+}
+
+@keyframes waveFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.tile-wave {
+  animation: waveFloat ease-in-out infinite;
+}
+
+.tile-wave:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.02);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.tile-wave .overlay { background: rgba(0,0,0,0); transition: background 0.4s ease; }
+.tile-wave:hover .overlay { background: rgba(0,0,0,0.55); }
+
+.tile-wave .overlay span {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease 0.06s, transform 0.3s ease 0.06s;
+}
+
+@keyframes textWaterGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 8px  rgba(120, 210, 255, 0.9),
+      0 0 20px rgba(100, 200, 255, 0.6),
+      0 0 40px rgba(80,  180, 255, 0.3);
+  }
+  33% {
+    text-shadow:
+      0 0 10px rgba(180, 235, 255, 1.0),
+      0 0 25px rgba(120, 210, 255, 0.7),
+      0 0 55px rgba(80,  180, 255, 0.4);
+  }
+  66% {
+    text-shadow:
+      0 0 6px  rgba(100, 195, 255, 0.8),
+      0 0 18px rgba(80,  180, 255, 0.55),
+      0 0 35px rgba(60,  160, 220, 0.25);
+  }
+}
+
+.tile-wave:hover .overlay span {
+  opacity: 1;
+  transform: translateY(0);
+
+  color: #e8f6ff;
+  animation: textWaterGlow 2.5s ease-in-out infinite;
+}
+
+/* Glow border layer — sits on top of the tile */
+.tile-wave::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(120, 200, 255, 0.18),
+    transparent 60%
+  );
+}
+
+/* Inner light-source highlight */
+.tile-wave::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+
+  background: radial-gradient(
+    200px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(180, 230, 255, 0.12),
+    transparent 70%
+  );
+}
+
+/* Animated water-like outline on hover */
+.tile-wave {
+  --glow-color-1: rgba(100, 200, 255, 0.7);
+  --glow-color-2: rgba(180, 240, 255, 0.4);
+  --glow-color-3: rgba(60, 160, 220, 0.6);
+  
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.tile-wave:hover::before,
+.tile-wave:hover::after {
+  opacity: 1;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes borderFlow {
+  to { --angle: 360deg; }
+}
+
+.tile-wave {
+  position: relative;
+}
+
+.tile-wave::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  z-index: -1; /* behind tile, not above it */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+
+  background: conic-gradient(
+    from var(--angle, 0deg) at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    transparent 0deg,
+    rgba(100, 200, 255, 0.9) 60deg,
+    rgba(180, 240, 255, 0.6) 120deg,
+    transparent 180deg,
+    rgba(60, 170, 230, 0.7) 240deg,
+    transparent 360deg
+  );
+  animation: borderFlow 3s linear infinite paused;
+}
+
+.tile-wave:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
