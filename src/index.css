@@ -44,21 +44,21 @@
 @keyframes textWaterGlow {
   0%, 100% {
     text-shadow:
-      0 0 8px  rgba(120, 210, 255, 0.9),
-      0 0 20px rgba(100, 200, 255, 0.6),
-      0 0 40px rgba(80,  180, 255, 0.3);
+      0 0 8px  #e7e2d4,
+      0 0 20px #ada286,
+      0 0 40px #272525;
   }
   33% {
     text-shadow:
-      0 0 10px rgba(180, 235, 255, 1.0),
-      0 0 25px rgba(120, 210, 255, 0.7),
-      0 0 55px rgba(80,  180, 255, 0.4);
+      0 0 10px #e7e2d4,
+      0 0 25px #ada286,
+      0 0 55px #272525;
   }
   66% {
     text-shadow:
-      0 0 6px  rgba(100, 195, 255, 0.8),
-      0 0 18px rgba(80,  180, 255, 0.55),
-      0 0 35px rgba(60,  160, 220, 0.25);
+      0 0 6px  #e7e2d4,
+      0 0 18px #ada286,
+      0 0 35px #272525;
   }
 }
 
@@ -108,10 +108,10 @@
 
 /* Animated water-like outline on hover */
 .tile-wave {
-  --glow-color-1: rgba(100, 200, 255, 0.7);
-  --glow-color-2: rgba(180, 240, 255, 0.4);
-  --glow-color-3: rgba(60, 160, 220, 0.6);
-  
+  --glow-color-1: #e7e2d4;
+  --glow-color-2: #ada286;
+  --glow-color-3: #272525;
+
   border: 1px solid transparent;
   background-clip: padding-box;
 }
@@ -148,10 +148,10 @@
   background: conic-gradient(
     from var(--angle, 0deg) at var(--mouse-x, 50%) var(--mouse-y, 50%),
     transparent 0deg,
-    rgba(100, 200, 255, 0.9) 60deg,
-    rgba(180, 240, 255, 0.6) 120deg,
+    #e7e2d4 60deg,
+    #ada286 120deg,
     transparent 180deg,
-    rgba(60, 170, 230, 0.7) 240deg,
+    #272525 240deg,
     transparent 360deg
   );
   animation: borderFlow 3s linear infinite paused;

@@ -26,26 +26,29 @@ function Home() {
   }
 
   const tiles = [
-    { to: "/about",   img: acisne,  label: "About Me",    cls: "row-span-2", dur: 3.8, delay: 0    },
-    { to: "/aiml",    img: aiImg,   label: "AI / ML",     cls: "col-span-2", dur: 4.2, delay: 0.5  },
-    { to: "/mobile",  img: appImg,  label: "Mobile Dev", cls: "row-span-3", dur: 3.5, delay: 1.1  },
-    { to: "/data",    img: dataImg, label: "Data",        cls: "",           dur: 4.6, delay: 0.3  },
-    { to: "/webdev",  img: webImg,  label: "Web Dev",     cls: "row-span-2", dur: 3.2, delay: 0.8  },
-    { to: "/gamedev", img: gameImg, label: "Game Dev", cls: "col-span-2", dur: 4.0, delay: 0.15 },
+    { to: "/about",   img: acisne,  label: "About Me",   cls: "md:row-span-2", dur: 3.8, delay: 0    },
+    { to: "/aiml",    img: aiImg,   label: "AI / ML",    cls: "md:col-span-2", dur: 4.2, delay: 0.5  },
+    { to: "/mobile",  img: appImg,  label: "Mobile Dev", cls: "md:row-span-3", dur: 3.5, delay: 1.1  },
+    { to: "/data",    img: dataImg, label: "Data",       cls: "",              dur: 4.6, delay: 0.3  },
+    { to: "/webdev",  img: webImg,  label: "Web Dev",    cls: "md:row-span-2", dur: 3.2, delay: 0.8  },
+    { to: "/gamedev", img: gameImg, label: "Game Dev",   cls: "md:col-span-2", dur: 4.0, delay: 0.15 },
   ]
 
   return (
-    <header className="h-screen bg-textsec font-bubbly">
+    <header className="min-h-screen bg-textsec font-bubbly">
       <div
         ref={gridRef}
         onMouseMove={handleMouseMove}
-        className="grid grid-cols-4 grid-rows-3 gap-1.5 h-full p-8"
+        className="
+          flex flex-col gap-1.5 p-4
+          md:grid md:grid-cols-4 md:grid-rows-3 md:h-screen md:p-8
+        "
       >
         {tiles.map(({ to, img, label, cls, dur, delay }) => (
           <Link
             key={to}
             to={to}
-            className={`tile-wave ${cls} relative rounded-lg cursor-pointer`}
+            className={`tile-wave ${cls} relative rounded-lg cursor-pointer h-40 md:h-auto`}
             style={{
               animationDuration: `${dur}s`,
               animationDelay: `${delay}s`,

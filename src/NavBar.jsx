@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom'
 function NavBar() {
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      if (currentScrollY < lastScrollY-1 || currentScrollY < 10) {
-        setVisible(true)   // scrolling up → show
+      if (currentScrollY < lastScrollY - 1 || currentScrollY < 10) {
+        setVisible(true)
       } else {
-        setVisible(false)  // scrolling down → hide
+        setVisible(false)
+        setMenuOpen(false) // close menu when navbar hides
       }
 
       setLastScrollY(currentScrollY)
@@ -22,9 +24,19 @@ function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [lastScrollY])
 
+  const navLinks = [
+    { to: "/about", label: "About" },
+    { to: "/aiml", label: "AI / ML" },
+    { to: "/data", label: "Data" },
+    { to: "/webdev", label: "Web Dev" },
+    { to: "/mobile", label: "Mobile App Dev" },
+    { to: "/gamedev", label: "Game Dev" },
+    { to: "/contact", label: "Contact" },
+  ]
+
   return (
     <header className={`bg-textsec text-background font-primary p-4 top-0 sticky z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
-      <nav className='flex flex-col md:flex-row md:items-center md:justify-between'>
+      <nav className='flex items-center justify-between'>
         <h1 className='text-xl font-bold'>
           <Link to="/">Adam Cisneros</Link>
           <a
@@ -37,16 +49,42 @@ function NavBar() {
             ↓ Resume
           </a>
         </h1>
-        <ul className='flex space-x-5'>
-          <li><Link to="/about" className='hover:underline'>About</Link></li>
-          <li><Link to="/aiml" className='hover:underline'>AI / ML</Link></li>
-          <li><Link to="/data" className='hover:underline'>Data</Link></li>
-          <li><Link to="/webdev" className='hover:underline'>Web Dev</Link></li>
-          <li><Link to="/mobile" className='hover:underline'>Mobile App Dev</Link></li>
-          <li><Link to="/gamedev" className='hover:underline'>Game Dev</Link></li>
-          <li><Link to="/contact" className='hover:underline'>Contact</Link></li>
+
+        {/* Desktop nav links */}
+        <ul className='hidden lg:flex space-x-5'>
+          {navLinks.map(({ to, label }) => (
+            <li key={to}><Link to={to} className='hover:underline'>{label}</Link></li>
+          ))}
         </ul>
+
+        {/* Hamburger button on small screens */}
+        <button
+          className='lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5'
+          onClick={() => setMenuOpen(prev => !prev)}
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-6 h-0.5 bg-background transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-background transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-background transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        </button>
       </nav>
+
+      {/* Dropdown menu for small screens */}
+      {menuOpen && (
+        <ul className='lg:hidden mt-3 flex flex-col space-y-3 pb-2'>
+          {navLinks.map(({ to, label }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                className='hover:underline block'
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </header>
   )
 }
