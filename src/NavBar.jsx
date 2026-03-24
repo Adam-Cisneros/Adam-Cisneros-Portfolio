@@ -40,7 +40,7 @@ function NavBar() {
         <h1 className='text-xl font-bold'>
           <Link to="/">Adam Cisneros</Link>
           <a
-            href="/Adam--Cisneros.pdf"
+            href="./AdamCisneros.pdf"
             download="Adam_Cisneros_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
