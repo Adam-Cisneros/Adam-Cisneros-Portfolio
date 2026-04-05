@@ -48,7 +48,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       <style>{`
         [data-reveal] {
           opacity: 0;

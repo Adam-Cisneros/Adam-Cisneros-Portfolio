@@ -95,7 +95,8 @@ function About() {
               <h3 className="font-bold mb-2">Systems & Tools</h3>
               <p>
                 REST APIs, DBMS, Cloud Platforms (Azure, Vercel), Database Systems (SQL & NoSQL), CI/CD,
-                Git, GitHub, React, MongoDB, Firebase/Firestore, Supabase, scikit-learn, StableBaselines3
+                Git, GitHub, React, MongoDB, Firebase/Firestore, Supabase, scikit-learn, StableBaselines3,
+                OpenGL, WebGL
               </p>
             </div>
             <div className="bg-accent p-4 rounded-lg text-textsec shadow-2xl shadow-textsec">

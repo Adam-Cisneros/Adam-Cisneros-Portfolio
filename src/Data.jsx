@@ -41,7 +41,7 @@ function Data() {
             }
           `}</style>
 
-          <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary">
+          <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary h-screen">
             <h1 className="text-4xl font-bold mb-4" data-reveal>Data/Database Projects</h1>
             <p className="text-lg pb-8" data-reveal>This page is dedicated to showcasing my Data/Database projects.</p>
             <div className="flex flex-col items-center justify-center gap-16">

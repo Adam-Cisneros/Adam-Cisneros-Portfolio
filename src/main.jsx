@@ -10,6 +10,7 @@ import WebDev from './WebDev.jsx'
 import Mobile from './Mobile.jsx'
 import Game from './Game.jsx'
 import Contact from './Contact.jsx'
+import Graphics from './Graphics.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <HashRouter>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/mobile" element={<Mobile />} />
       <Route path="/gamedev" element={<Game />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/graphics" element={<Graphics />} />
     </Routes>
   </HashRouter>,
 )

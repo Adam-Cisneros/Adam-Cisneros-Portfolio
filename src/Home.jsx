@@ -6,6 +6,7 @@ import appImg from './assets/app.png'
 import aiImg from './assets/ai.png'
 import webImg from './assets/webdev.png'
 import gameImg from './assets/vg.png'
+import graphicsImg from './assets/graphics.jpg'
 
 function Home() {
   const gridRef = useRef(null)
@@ -28,10 +29,11 @@ function Home() {
   const tiles = [
     { to: "/about",   img: acisne,  label: "About Me",   cls: "md:row-span-2", dur: 3.8, delay: 0    },
     { to: "/aiml",    img: aiImg,   label: "AI / ML",    cls: "md:col-span-2", dur: 4.2, delay: 0.5  },
-    { to: "/mobile",  img: appImg,  label: "Mobile Dev", cls: "md:row-span-3", dur: 3.5, delay: 1.1  },
+    { to: "/mobile",  img: appImg,  label: "Mobile Dev", cls: "md:row-span-2", dur: 3.5, delay: 1.1  },
     { to: "/data",    img: dataImg, label: "Data",       cls: "",              dur: 4.6, delay: 0.3  },
     { to: "/webdev",  img: webImg,  label: "Web Dev",    cls: "md:row-span-2", dur: 3.2, delay: 0.8  },
     { to: "/gamedev", img: gameImg, label: "Game Dev",   cls: "md:col-span-2", dur: 4.0, delay: 0.15 },
+    { to: "/graphics", img: graphicsImg, label: "Graphics", cls: "", dur: 4.0, delay: 0.15 },
   ]
 
   return (

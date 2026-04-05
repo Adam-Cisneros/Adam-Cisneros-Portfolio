@@ -31,6 +31,7 @@ function NavBar() {
     { to: "/webdev", label: "Web Dev" },
     { to: "/mobile", label: "Mobile App Dev" },
     { to: "/gamedev", label: "Game Dev" },
+    { to: "/graphics", label: "Graphics" },
     { to: "/contact", label: "Contact" },
   ]
 
