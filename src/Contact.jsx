@@ -48,7 +48,7 @@ function Contact() {
   };
 
   return (
-    <div className="h-screen">
+    <div>
       <style>{`
         [data-reveal] {
           opacity: 0;
@@ -61,7 +61,7 @@ function Contact() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="py-20 bg-background text-textprime text-center font-primary">
+      <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary min-h-screen">
         <h1 className="text-4xl font-bold mb-4" data-reveal>Contact Me</h1>
         <p className="text-lg pb-8" data-reveal>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
         <p className="text-lg pb-8" data-reveal>Follow me on my socials:</p>
