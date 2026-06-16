@@ -72,7 +72,7 @@ function About() {
           <div className="bg-[url('./assets/acisne32.jpg')] bg-cover bg-center h-64 w-64 rounded-full mx-auto mb-8 shadow-2xl shadow-textsec" />
           <h1 className="text-4xl font-bold mb-8">About Me</h1>
           <p className="text-lg">
-            I am a driven computer science student with a curiosity for solving problems and a passion for 
+            I am a driven software engineer with a curiosity for solving problems and a passion for 
             technology. Whether it's developing efficient algorithms, making video games, learning new languages, 
             or exploring the frontiers of artificial intelligence and machine learning, I thrive on turning ideas 
             into impactful products. With proven experience in many areas of the computer science field, I have 
@@ -102,7 +102,7 @@ function About() {
             <div className="bg-accent p-4 rounded-lg text-textsec shadow-2xl shadow-textsec">
               <h3 className="font-bold mb-2">Concepts & Experience</h3>
               <p>
-                Full-Stack Development (Backend & Frontend Design), Scalable Systems, Distributed Systems, Cloud
+                Full-Stack Development (Backend & Frontend Design), Scalable Systems, Networks, Distributed Systems, Cloud
                 Deployment, UI/UX, Artificial Intelligence & Machine Learning, Data Structures & Algorithms, Agile Collaboration &
                 Development, Data Analysis, Data Visualization, Statistical Modeling, Authentication, Data Flow, Unit Testing,
                 Software Development Life Cycle (SDLC)
@@ -126,7 +126,7 @@ function About() {
                 <br />
                 California Polytechnic State University - San Luis Obispo
                 <br />
-                Graduating in Spring 2026
+                Graduated in Spring 2026 with <i>Magna Cum Laude</i>
               </p>
               <div>
                 <h3 className="font-bold mb-2 text-2xl">Relevant Coursework</h3>
