@@ -89,14 +89,14 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4" data-reveal data-reveal-group>
             <div className="bg-accent p-4 rounded-lg text-textsec shadow-2xl shadow-textsec">
               <h3 className="font-bold mb-2">Programming Languages</h3>
-              <p>Python, C, C++, C#, HTML, CSS, JavaScript, Kotlin</p>
+              <p>Python, SQL, C, C++, C#, HTML, CSS, JavaScript, Kotlin</p>
             </div>
             <div className="bg-accent p-4 rounded-lg text-textsec shadow-2xl shadow-textsec">
               <h3 className="font-bold mb-2">Systems & Tools</h3>
               <p>
-                REST APIs, DBMS, Cloud Platforms (Azure, Vercel), Database Systems (SQL & NoSQL), CI/CD,
+                REST APIs, Node.js, npm, DBMS, Cloud Platforms (Azure, Vercel), Database Systems (SQL & NoSQL), CI/CD,
                 Git, GitHub, React, MongoDB, Firebase/Firestore, Supabase, scikit-learn, StableBaselines3,
-                OpenGL, WebGL
+                Tableau, Pandas, Matplotlib, TailwindCSS, Gradle, OpenGL, WebGL, Godot, Unity
               </p>
             </div>
             <div className="bg-accent p-4 rounded-lg text-textsec shadow-2xl shadow-textsec">
