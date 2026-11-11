@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
-import Home from './Home.jsx'
 import NavBar from './NavBar.jsx'
 import About from './About.jsx'
 import AIML from './AIML.jsx'
@@ -11,13 +10,14 @@ import Mobile from './Mobile.jsx'
 import Game from './Game.jsx'
 import Contact from './Contact.jsx'
 import Graphics from './Graphics.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <HashRouter>
     <NavBar />
+    <ScrollToTop />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/" element={<About />} />
       <Route path="/aiml" element={<AIML />} />
       <Route path="/data" element={<Data />} />
       <Route path="/webdev" element={<WebDev />} />

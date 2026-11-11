@@ -41,7 +41,7 @@ function Graphics() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary h-screen">
+      <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary min-h-screen">
         <h1 className="text-4xl font-bold mb-4" data-reveal>Graphics Projects</h1>
         <p className="text-lg pb-8" data-reveal>This page is dedicated to showcasing my Graphics projects.</p>
         <div className="flex flex-col items-center justify-center gap-16">

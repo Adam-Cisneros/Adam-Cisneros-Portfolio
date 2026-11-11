@@ -25,7 +25,7 @@ function NavBar() {
   }, [lastScrollY])
 
   const navLinks = [
-    { to: "/about", label: "About" },
+    { to: "/", label: "About" },
     { to: "/aiml", label: "AI / ML" },
     { to: "/data", label: "Data" },
     { to: "/webdev", label: "Web Dev" },
