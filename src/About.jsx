@@ -65,13 +65,13 @@ function About() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary">
+      <section ref={sectionRef} className="py-20 bg-background page-texture text-textprime text-center items-center font-primary">
 
         {/* Hero / Intro */}
         <div className="container mx-auto" data-reveal>
-          <div className="bg-[url('./assets/acisne32.jpg')] bg-cover bg-center h-64 w-64 rounded-full mx-auto mb-8 shadow-2xl shadow-textsec" />
+          <div className="bg-[url('./assets/acisne32.jpg')] bg-cover bg-center md:w-128 md:h-128 h-64 w-64 rounded-full mx-auto mb-8 shadow-2xl shadow-textsec" />
           <h1 className="text-4xl font-bold mb-8">About Me</h1>
-          <p className="text-lg">
+          <p className="text-lg mx-5">
             I am a driven software engineer with a curiosity for solving problems and a passion for 
             technology. Whether it's developing efficient algorithms, making video games, learning new languages, 
             or exploring the frontiers of artificial intelligence and machine learning, I thrive on turning ideas 

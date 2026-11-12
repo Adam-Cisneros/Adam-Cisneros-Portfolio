@@ -44,7 +44,7 @@ function AIML() {
       <section ref={sectionRef} className="py-20 bg-background text-textprime text-center items-center font-primary">
         <h1 className="text-4xl font-bold mb-4" data-reveal>AI / ML</h1>
         <p className="text-lg pb-8" data-reveal>This page is dedicated to showcasing my AI and ML projects.</p>
-        <div className="flex flex-col items-center justify-center gap-16">
+        <div className="flex flex-col items-center justify-center gap-16 mx-5">
           <div className="md:w-1/2 bg-accent text-textsec p-4 rounded-lg shadow-2xl shadow-textsec" data-reveal>
             <h2 className="text-2xl font-bold mb-2">Game Success Classifier</h2>
             <p className="text-lg py-8">

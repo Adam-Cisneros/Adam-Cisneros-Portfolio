@@ -77,7 +77,7 @@ function Contact() {
           </a>
         </div>
         <p className="text-lg pb-8" data-reveal> . . . Or feel free to reach out if you have any questions or inquiries!</p>
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center py-16 rounded-lg bg-accent text-textsec w-full md:w-3/4 mx-auto shadow-2xl shadow-textsec" data-reveal>
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center justify-center py-16 rounded-lg bg-accent text-textsec md:mx-auto md:w-3/4 mx-5 shadow-2xl shadow-textsec" data-reveal>
           <h1 className="text-4xl font-bold pb-8">Fill Out The Form Below to Send Me A Message!</h1>
           <input type="text" name="name" placeholder="Your Name" className="mb-4 p-2 rounded-lg w-4/5 md:w-3/4 bg-background text-textsec hover:scale-101 hover:shadow-2xl hover:shadow-textsec transition-transform" />
           <input type="email" name="email" placeholder="Your Email" className="mb-4 p-2 rounded-lg w-4/5 md:w-3/4 bg-background text-textsec hover:scale-101 hover:shadow-2xl hover:shadow-textsec transition-transform" />
